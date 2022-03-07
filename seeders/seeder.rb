@@ -6,5 +6,5 @@ pages << {
   vars: {
     category: "Cellphones & Telecommunications"
   },
-  type: "browser"
+  fetch_type: "browser"
 }
