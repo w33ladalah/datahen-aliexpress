@@ -1,8 +1,9 @@
 nokogiri = Nokogiri.HTML(content)
-products = nokogiri.css('.product-container a._2f4Ho')
+products = nokogiri.css('.product-container div.JIIxO > a')
 
-products.each do |product|
-  href = product.at_css('a')['href'].split('?').first
+products.each do |product_link|
+  # p product_link
+  href = product_link['href'].split('?').first
   url = URI.join('https://www.aliexpress.com', href).to_s
   display_width = rand 800..1920
   display_height = rand 728..1280
@@ -11,7 +12,7 @@ products.each do |product|
 		page_type: 'products',
 		vars: {
 			category: page['vars']['category'],
-            url: url
+      url: url
 		}
   }
 end
