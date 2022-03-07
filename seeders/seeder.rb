@@ -5,5 +5,6 @@ pages << {
   url: "https://www.aliexpress.com/premium/category/509.html?CatId=509&spm=a2g0o.home.103.1.650c2145B2WgtQ",
   vars: {
     category: "Cellphones & Telecommunications"
-  }
+  },
+  type: "browser"
 }
